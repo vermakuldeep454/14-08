@@ -2,6 +2,12 @@ const express = require('express');
 const puppeteer = require('puppeteer');
 const path = require('path');
 const app = express();
+
+app.use('/assets', express.static(path.join(__dirname, 'assets')));
+app.use('/fontawesome', express.static(path.join(__dirname, 'fontawesome')));
+app.use('/fonts', express.static(path.join(__dirname, 'fonts')));
+
+
 //const port = 3000;
 const port = process.env.PORT || 3000;
 
