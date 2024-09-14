@@ -1,12 +1,28 @@
-<IfModule mod_rewrite.c>
-    <IfModule mod_negotiation.c>
-        Options -MultiViews
-    </IfModule>
-    RewriteEngine On
-    # Redirect Trailing Slashes...
-    RewriteRule ^(.*)/$ /$1 [L,R=301]
-    # Handle Front Controller...
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^ index.html [L]
-</IfModule>
+# Enable Rewrite Engine
+RewriteEngine On
+
+# Redirect www to non-www (optional)
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+# Force HTTPS (optional)
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Default mode redirect to /default/
+RewriteCond %{REQUEST_URI} ^/$
+RewriteRule ^$ /default/ [L,R=301]
+
+# Handle Light Mode - Serve the light-mode folder
+RewriteCond %{REQUEST_URI} ^/light-mode$
+RewriteRule ^light-mode$ /light-mode/index.html [L]
+
+# Handle Dark Mode - Serve the dark-mode folder
+RewriteCond %{REQUEST_URI} ^/dark-mode$
+RewriteRule ^dark-mode$ /dark-mode/index.html [L]
+
+# Serve static assets from assets, fontawesome, fonts folders
+RewriteRule ^assets/(.*)$ /assets/$1 [L]
+RewriteRule ^fontawesome/(.*)$ /fontawesome/$1 [L]
+RewriteRule ^fonts/(.*)$ /fonts/$1 [L]
+
