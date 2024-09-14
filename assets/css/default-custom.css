@@ -1,0 +1,201 @@
+/* General body styling */
+body {
+	font-family: "Roboto", sans-serif;
+	/* Set font family */
+}
+
+/* Padding top and bottom 100px */
+.ptb-100 {
+	padding: 100px 0px;
+	/* Add top and bottom padding */
+}
+
+/* Footer navigation link styling on focus and hover */
+.footer-nav .nav-link:focus,
+.nav-link:hover {
+	background-color: var(--bs-primary-200);
+	/* Background color on focus/hover */
+	color: var(--bs-white);
+	/* Text color on focus/hover */
+	background-color: var(--bs-primary);
+	/* Override background color on focus/hover */
+}
+
+/* Footer navigation link and general navigation link styling */
+.footer-nav .nav-link,
+.nav-link {
+	color: var(--bs-white);
+	/* Set text color */
+	font-size: 0.875em;
+	/* Set font size */
+	border-radius: var(--bs-border-radius-sm);
+	/* Set border radius */
+}
+
+/* Margin right 5px */
+.mr-2 {
+	margin-right: 5px;
+	/* Add right margin */
+}
+
+/* Background color primary-100 */
+.bg-primary-100 {
+	background-color: var(--bs-primary-100) !important;
+	/* Set background color with important */
+}
+
+/* Background color secondary */
+.bg-sec {
+	background-color: var(--bs-primary-100);
+	/* Set background color */
+}
+
+/* Border bottom primary color */
+.border-bottom-primary {
+	border-bottom: 1px solid var(--bs-primary-200);
+	/* Set border bottom color */
+}
+
+/* Spinner Begin */
+
+/* Loading overlay styling */
+#loading-overlay {
+	position: fixed;
+	/* Fixed positioning */
+	top: 0;
+	/* Top position */
+	left: 0;
+	/* Left position */
+	width: 100%;
+	/* Full width */
+	height: 100%;
+	/* Full height */
+	background: rgba(0, 0, 0, 0.8);
+	/* Background color with opacity */
+	color: white;
+	/* Text color */
+	display: flex;
+	/* Flexbox layout */
+	justify-content: center;
+	/* Center align horizontally */
+	align-items: center;
+	/* Center align vertically */
+	z-index: 1000;
+	/* Stack order */
+	visibility: hidden;
+	/* Hidden by default */
+}
+
+/* Spinner styling */
+.spinner {
+	margin: 0 auto;
+	/* Center align */
+	border: 13px solid var(--bs-white);
+	/* Outer border */
+	border-radius: 50%;
+	/* Circular shape */
+	border-top: 13px solid var(--bs-primary);
+	/* Top border color */
+	width: 100px;
+	/* Width */
+	height: 100px;
+	/* Height */
+	animation: spin 2s linear infinite;
+	/* Spin animation */
+	margin-bottom: 15px;
+	/* Bottom margin */
+}
+
+/* Keyframes for spinner animation */
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+		/* Initial rotation */
+	}
+
+	100% {
+		transform: rotate(360deg);
+		/* Final rotation */
+	}
+}
+
+/* Spinner End */
+
+/* View height 90% */
+.vh-90 {
+	height: 90vh !important;
+	/* Set height with important */
+}
+
+/* Group box styling */
+.grp-bx {
+	justify-content: center;
+	/* Center align horizontally */
+	align-items: center;
+	/* Center align vertically */
+	display: flex;
+	/* Flexbox layout */
+}
+
+/* WhatsApp group link styling */
+.w-group {
+	font-size: 10px;
+	/* Font size */
+	color: #fff;
+	/* Text color */
+	border-radius: 8px;
+	/* Border radius */
+	padding: 4px 6px;
+	/* Padding */
+	text-decoration: none;
+	/* Remove text decoration */
+}
+
+/* WhatsApp group join button styling */
+.w-group-join {
+	font-size: 10px;
+	/* Font size */
+	color: #fff;
+	/* Text color */
+	border-radius: 8px;
+	/* Border radius */
+	padding: 4px 6px;
+	/* Padding */
+	background-color: #25D366;
+	/* Background color */
+}
+
+/* Text truncate styling */
+.text-truncate {
+	max-width: 300px;
+	/* Maximum width */
+	font-size: 13px;
+	/* Font size */
+	font-weight: 400;
+	/* Font weight */
+	overflow: hidden;
+	/* Hide overflow */
+	text-overflow: ellipsis;
+	/* Ellipsis for overflow text */
+	white-space: nowrap;
+	/* No line breaks */
+}
+
+.border-bottom-dark {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.fs-16 {
+	font-size: 16px;
+}
+
+.hidden {
+	display: none;
+}
+
+.txt-wht {
+	font-size: 12px;
+	margin-left: 4px;
+	font-weight: 400;
+	color: #000;
+}

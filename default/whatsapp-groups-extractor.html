@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- Character set configuration -->
+      <meta charset="UTF-8">
+      <title>Whatsapp Groups Extractor - Extract WhatsApp Groups and Numbers Easily</title>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="index, follow">
+      <meta name="author" content="Design Collection">
+      <link id="favicon" rel="icon" type="image/x-icon" href="../assets/images/favicon.png"/>
+      <meta name="description" content="Whatsapp Groups Extractor is a powerful tool designed to extract WhatsApp groups and retrieve numbers from WhatsApp groups effortlessly. Simplify your data extraction process with our user-friendly software.">
+      <meta name="keywords" content="WhatsApp group extractor, extract WhatsApp numbers, WhatsApp group data extraction, WhatsApp group retriever, WhatsApp number extractor, WhatsApp data tool, WhatsApp groups tool, extract WhatsApp data.">
+      <!-- Viewport configuration, scaling options -->
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <!-- Bootstrap CSS -->
+      <link href="../assets/css/default-bootstrap.min.css" rel="stylesheet">
+      <!-- Bootstrap Script -->
+      <script src="../assets/js/bootstrap.bundle.min.js"></script>
+      <!-- CSS Stylesheet -->
+      <link href="../assets/css/default-custom.css" rel="stylesheet">
+      <!--fontawesome-->
+      <link href="fontawesome/css/fontawesome.css" rel="stylesheet">
+      <!-- Google web font  -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+   </head>
+   <body>
+      <!-- Navbar Begin -->
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark border-bottom-primary">
+         <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="../assets/images/logo.png" class="img-fluid" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+               <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                     <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="whatsapp-groups-extractor.html">Groups Extractor</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="whatsapp-numbers-extractor.html">Numbers Extractor</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="../documentation/index.html" target="_blank">Documentation</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" target="_blank" href="mailto:support@designcollection.in" target="_blank">Support</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <!-- Navbar End -->
+      <!-- WhatsApp Group Extractor Begin -->
+      <section class="bg-light ptb-100 ">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <!-- Group Begin -->
+                  <div class="card shadow-sm p-3">
+                     <div class="card-header bg-primary p-3">
+                        <h6 class="text-white">WhatsApp Groups Extractor</h6>
+                     </div>
+                     <div class="card-body px-0">
+                        <form id="searchForm" action="/search" method="post">
+                           <div class="mb-3">
+                              <input type="text" name="query" class="form-control" placeholder="Real Estate Whatsapp Group" required>
+                           </div>
+                           <p class="my-3"><strong>Note:</strong> Select your preferred time interval by clicking the radio button. The longer the time you choose, the more extensive the data extraction will be, providing you with richer and more detailed information.</p>
+                           <div class="mb-3">
+                              <div class="form-check form-check-inline">
+                                 <input type="radio" class="form-check-input" id="1min" name="timeLimit" value="1" required>
+                                 <label class="form-check-label" for="1min">1 min</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                 <input type="radio" class="form-check-input" id="2min" name="timeLimit" value="2" required>
+                                 <label class="form-check-label" for="2min">2 min</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                 <input type="radio" class="form-check-input" id="5min" name="timeLimit" value="5">
+                                 <label class="form-check-label" for="5min">5 min</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                 <input type="radio" class="form-check-input" id="10min" name="timeLimit" value="10">
+                                 <label class="form-check-label" for="10min">10 min</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                 <input type="radio" class="form-check-input" id="15min" name="timeLimit" value="15">
+                                 <label class="form-check-label" for="15min">15 min</label>
+                              </div>
+                           </div>
+                           <button class="btn btn-primary shadow-none" type="submit">Search</button>
+                        </form>
+                     </div>
+                  </div>
+                  <!-- Group End -->
+                  <img src="../assets/images/default-whatsapp-groups-extractor.jpg" class="img-fluid mt-3 img-thumbnail">
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- WhatsApp Group Extractor End -->
+      <!--Spinner Begin-->
+      <div id="loading-overlay" class="d-flex justify-content-center align-items-center" style="visibility: hidden;">
+         <div class="text-center">
+            <div class="spinner"></div>
+            <h5 class="text-white">Do not click on the back button or refresh the page.<br/> Your WhatsApp group is being extracted!...</h5>
+         </div>
+      </div>
+      <!--Spinner End-->
+      <!-- Footer Begin -->
+      <footer class="footer bg-dark">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-12">
+                  <p class="text-center p-3 text-white">© Design Collection 2016</p>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- Footer End -->
+      <script>
+         document.getElementById('searchForm').addEventListener('submit', function() {
+           document.getElementById('loading-overlay').style.visibility = 'visible';
+         });
+      </script>
+   </body>
+</html>
