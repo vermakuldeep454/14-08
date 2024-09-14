@@ -1,27 +1,18 @@
 {
   "version": 2,
-  "builds": [
+  "redirects": [
     {
-      "src": "server.js",
-      "use": "@vercel/node"
+      "source": "/old-page",
+      "destination": "/new-page",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "destination": "https://whatsapp-group-extractor.vercel.app/$1",
+      "permanent": true
     }
   ],
-  "routes": [
-    {
-      "src": "/light-mode",
-      "dest": "/light-mode/index.html"
-    },
-    {
-      "src": "/dark-mode",
-      "dest": "/dark-mode/index.html"
-    },
-    {
-      "src": "/default",
-      "dest": "/default/index.html"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "server.js"
-    }
-  ]
+  "errorPages": {
+    "404": "/404.html"
+  }
 }
