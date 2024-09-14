@@ -1,5 +1,29 @@
 {
   "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/light-mode",
+      "dest": "/light-mode/index.html"
+    },
+    {
+      "src": "/dark-mode",
+      "dest": "/dark-mode/index.html"
+    },
+    {
+      "src": "/default",
+      "dest": "/default/index.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "server.js"
+    }
+  ],
   "redirects": [
     {
       "source": "/old-page",
@@ -11,8 +35,5 @@
       "destination": "https://whatsapp-group-extractor.vercel.app/$1",
       "permanent": true
     }
-  ],
-  "errorPages": {
-    "404": "/404.html"
-  }
+  ]
 }
