@@ -4,13 +4,21 @@
     {
       "src": "server.js",
       "use": "@vercel/node"
-    },
-    {
-      "src": "index.html",
-      "use": "@vercel/static"
     }
   ],
   "routes": [
+    {
+      "src": "/light-mode",
+      "dest": "/light-mode/index.html"
+    },
+    {
+      "src": "/dark-mode",
+      "dest": "/dark-mode/index.html"
+    },
+    {
+      "src": "/default",
+      "dest": "/default/index.html"
+    },
     {
       "src": "/(.*)",
       "dest": "server.js"
